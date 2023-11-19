@@ -1,6 +1,6 @@
-# Datenträger vorbereiten
+# Datenträger vorbereiten - ohne Verschlüsselung
 
-Da das System im EFI-Modus gebooted werden soll, muss auf dem Datenträger eine GPT-Partitionstabelle erstellt werden. Es werden im Anschluss zwei Partitionen erzeugt. Eine EFI-Systempartition (**E**FI **S**ystem **P**artition, im weiteren Verlauf abgekürzt als `esp`) mit 1024 MiB und eine Systempartition die den Rest des Datenträgers einnimmt (abzüglich ein paar Gigabyte für Overprovisioning). Da Swapspeicher als ZSwap nur im RAM lebt, wird keine Swappartition benötigt.
+Da das System im EFI-Modus gebooted werden soll, muss auf dem Datenträger eine GPT-Partitionstabelle erstellt werden. Es werden im Anschluss zwei Partitionen erzeugt. Eine EFI-Systempartition (**E**FI **S**ystem **P**artition, im weiteren Verlauf abgekürzt als `esp`) mit 1024 MiB und eine Systempartition die den Rest des Datenträgers einnimmt (abzüglich ein paar Gigabyte für Overprovisioning). Da Swapspeicher als `zram` nur im RAM lebt, wird keine Swappartition benötigt.
 
 ## Partitionstabelle und Partitionen erstellen
 
