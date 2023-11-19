@@ -8,7 +8,7 @@ Von USB-Stick im EFI-Modus booten. Secure Boot muss dafür deaktiviert sein.
 
 ### Tastaturbelegung ändern (optional)
 
-Optional, da eine **en_US** Tastaturbelegung während der Installations mit ihren vielen Pfadangaben ganz praktisch ist.
+Optional, da eine **en_US** Tastaturbelegung während der Installation mit ihren vielen Pfadeingaben ganz praktisch ist.
 
 ```bash
 loadkeys de-latin1-nodeadkeys
