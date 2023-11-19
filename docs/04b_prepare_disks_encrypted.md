@@ -1,4 +1,4 @@
-# Datenträger vorbereiten
+# Datenträger vorbereiten - mit Datenträgerverschlüsselung
 
 ACHTUNG: Veraltet!!!!! Nach Vorgabe von `04a_prepare_disks.md` aktualisieren und dann diesen Text löschen!
 
@@ -9,7 +9,7 @@ Infos zum Durcharbeiten:
 * [Sicheres Löschen im Archwiki](https://wiki.archlinux.org/title/Securely_wipe_disk)
 * [SSD Besonderheiten im Archwiki](https://wiki.archlinux.org/title/Solid_state_drive/Memory_cell_clearing#Common_method_with_blkdiscard)
 
-Da das System im EFI-Modus gebooted werden soll, muss auf dem Datenträger eine GPT-Partitionstabelle erstellt werden. Es werden im Anschluss zwei Partitionen erzeugt. Eine EFI-Systempartition (**E**FI **S**ystem **P**artition, im weiteren Verlauf abgekürzt als `esp`) mit 1024 MiB und eine Systempartition die den Rest des Datenträgers einnimmt (abzüglich ein paar Gigabyte für Overprovisioning). Da Swapspeicher als ZSwap nur im RAM lebt, wird keine Swappartition benötigt.
+Da das System im EFI-Modus gebooted werden soll, muss auf dem Datenträger eine GPT-Partitionstabelle erstellt werden. Es werden im Anschluss zwei Partitionen erzeugt. Eine EFI-Systempartition (**E**FI **S**ystem **P**artition, im weiteren Verlauf abgekürzt als `esp`) mit 1024 MiB und eine Systempartition die den Rest des Datenträgers einnimmt (abzüglich ein paar Gigabyte für Overprovisioning). Da Swapspeicher als `zram` nur im RAM lebt, wird keine Swappartition benötigt.
 
 ## Vorhandene Datenträger und Partitionen auflisten
 
@@ -25,7 +25,7 @@ Alternativ:
 lsblk -f
 ```
 
-Es wird anschließend immer `/dev/nvme0n1` als Ziel für die Installation angenommen. Bei abweichender Hardware (z.B. M2 SSD) muss das Zielgerät entsprechend angepasst werden.
+Es wird anschließend immer `/dev/nvme0n1` als Ziel für die Installation angenommen. Bei abweichender Hardware (z.B. SATA SSD) muss das Zielgerät entsprechend angepasst werden.
 
 ## Datenträger sicher löschen
 
