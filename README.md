@@ -7,9 +7,9 @@
   * Secure-Boot aktiv[^1]
   * Systemd-boot als Bootmanager
 * BTRFS mit Möglichkeit für Snapshots
-* Verschlüsselte Systempartition[^1]
-* ZSwap statt Swappartition
-* Initramfs mit `booster` erzeugen statt `mkinitcpio` oder `dracut`[^1]
+  * Verschlüsselte Systempartition[^1]
+* Swap mit zram statt swap-Partition
+* Initramfs mit `booster` erzeugen statt `mkinitcpio`[^1]
 
 ## Installationsmedium erzeugen
 
@@ -43,5 +43,9 @@ Jetzt ist beten und hoffen angesagt.
 ## Post-Install
 
 [Systemkonfiguration und Administration](docs/07_post-install.md)
+
+## Debug
+
+[Mit Livesystem in bestehende Installation booten.](docs/00_archiso-to-chroot.md)
 
 [^1]: Erst in einem späteren Anlauf, wenn der Rest funktioniert!
