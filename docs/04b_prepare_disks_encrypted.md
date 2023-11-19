@@ -1,6 +1,4 @@
----
-title: Datenträger vorbereiten
----
+# Datenträger vorbereiten
 
 ACHTUNG: Veraltet!!!!! Nach Vorgabe von `04a_prepare_disks.md` aktualisieren und dann diesen Text löschen!
 

@@ -1,6 +1,4 @@
----
-title: Installation des Grundsystems
----
+# Installation des Grundsystems
 
 ## Grundlegende Pakete installieren
 

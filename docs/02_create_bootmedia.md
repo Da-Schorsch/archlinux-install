@@ -1,6 +1,4 @@
----
-title: Bootbaren USB-Stick erstellen
----
+# Bootbaren USB-Stick erstellen
 
 ## Download
 

@@ -1,6 +1,4 @@
----
-title: System einrichten
----
+# System einrichten
 
 ## Pacman
 

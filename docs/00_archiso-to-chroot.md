@@ -1,6 +1,4 @@
----
-title: Mit Archiso auf bestehendes System zugreifen
----
+# Mit Archiso auf bestehendes System zugreifen
 
 ## Zugriff auf bestehendes System zu Reparaturzwecken
 
@@ -12,8 +10,6 @@ loadkeys de-latin1-nodeadkeys
 setfont ter-u18b
 timedatectl set-ntp true
 timedatectl set-timezone Europe/Berlin
-
-passwd
 tmux
 
 reflector --latest 100 --number 30 --connection-timeout 2 --download-timeout 2 --ipv4 --protocol https --sort rate --country 'AT,BE,CH,DE,FR,IT' --save /etc/pacman.d/mirrorlist

@@ -1,6 +1,4 @@
----
-title: Konfiguration des Grundsystems
----
+# Konfiguration des Grundsystems
 
 ## Fstab
 

@@ -1,6 +1,4 @@
----
-title: Livesystem für Installation
----
+# Livesystem für Installation
 
 ## Boot
 
