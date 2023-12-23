@@ -56,7 +56,7 @@ Zum Schluss noch die Tastaturbelegung und Konsolenschriftart (beides optional)
 nano /etc/vconsole.conf
 -----------------------
 FONT=ter-u18b
-FONT_MAP=8559-15
+FONT_MAP=8859-15
 KEYMAP=de-latin1
 XKBLAYOUT=de
 XKBMODEL=pc105
