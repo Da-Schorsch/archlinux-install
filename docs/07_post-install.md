@@ -70,6 +70,13 @@ useradd -m -G wheel schorsch
 
 ## Ab hier TODO
 
+* sudo statt doas
+* sudo Konfiguration schon im chroot statt nach Neustart
+* Ditto für Anlegen des Benutzerkontos
+* Konfiguration des Intelgrafiktreibers (GuC/HuC)
+* iommu Konfig in ` /etc/kernel/cmdline`
+* Kurze Zeitverzögerung + Menu für Bootloader (für alternativen Kernel oder Fallback)
+
 ## smartmontools
 
 Installation evtl. schon im Livesystem!
