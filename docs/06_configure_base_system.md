@@ -211,7 +211,6 @@ systemctl enable systemd-timesyncd.service
 
 ### TODOs und offene Fragen
 
-* Vielleicht doch NetworkManager statt Connman?
 * Aktivierung im Livesystem nicht geprüft (nur nach Neustart) für Connman und systemd-timesyncd
 * Wirelesskonfiguration mit iwd -> jetzt oder nach Reboot???
 * systemd-resolvd Konfiguration
