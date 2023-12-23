@@ -360,10 +360,13 @@ Den **HOOKS** Eintrag in `mkinitcpio.conf` anpassen. Gefordert ist:
 * Systemd init basierter Bootvorgang
 * Unbedingte Unterstützung von USB-Eingabegeräten, unabhängig davon, welche Geräte beim Erzeugen der *initrd* gerade angeschlossen sind (wichtig bei Laptops)
 
+Außerdem den Graphictreiber unter **MODULES** angeben für Early-KMS (korrekte Bildschirmauflösung schon beim Booten).
+
 ```text
 nano /etc/mkinitcpio.conf
 -------------------------
-HOOKS=(base systemd keyboard autodetect modconf block sd-vconsole sd-encrypt filesystems fsck)
+MODULES=(i915)
+HOOKS=(base systemd keyboard autodetect modconf kms block mdadm_udev sd-vconsole sd-encrypt lvm2 filesystems fsck)
 ```
 
 ```bash
