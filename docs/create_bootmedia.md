@@ -55,4 +55,4 @@ Pfad für Datenträger herausfinden mit `lsblk`. Der Datenträger darf vor Ausf�
 dd bs=4M if=path/to/archlinux-version-x86_64.iso of=/dev/sdx conv=fsync oflag=direct status=progress
 ```
 
-Unter Windows kann Rufus verwendet werden.
+Unter Windows kann **Rufus** verwendet werden.
