@@ -13,26 +13,22 @@
 
 ## Installationsmedium erzeugen
 
-[Bootbaren USB-Stick erstellen.](docs/02_create_bootmedia.md)
+[Bootbaren USB-Stick erstellen.](docs/create_bootmedia.md)
 
 ## Livesystem
 
-[Livesystem booten und Grundeinstellungen vornehmen.](docs/03_setup_livesystem.md)
+[Livesystem booten und Grundeinstellungen vornehmen.](docs/setup_livesystem.md)
 
 ## Datenträger vorbereiten
 
 Hier gibt es zwei Möglichkeiten:
 
-* [Standard (unverschlüsselt)](docs/04a_prepare_disks.md)
-* [Verschlüsselte Systempartition](docs/04b_prepare_disks_encrypted.md)
+* [Standard (unverschlüsselt)](docs/prepare_disks.md)
+* [Verschlüsselte Systempartition](docs/prepare_disks_encrypted.md)
 
-## Grundsystem installieren
+## Grundsystem installieren und konfigurieren
 
-[Installation des Grundsystems.](docs/05_install_base_system.md)
-
-## System konfigurieren
-
-[Konfiguration des Grundsystems.](docs/06_configure_base_system.md)
+[Installation und Konfiguration des Grundsystems.](docs/install_base_system.md)
 
 ## Neustart
 
@@ -42,8 +38,8 @@ Jetzt ist beten und hoffen angesagt.
 
 ## Post-Install
 
-[Systemkonfiguration und Administration](docs/07_post-install.md)
+[Systemkonfiguration und Administration](docs/post-install.md)
 
 ## Debug
 
-[Mit Livesystem in bestehende Installation booten.](docs/00_archiso-to-chroot.md)
+[Mit Livesystem in bestehende Installation booten.](docs/archiso-to-chroot.md)
