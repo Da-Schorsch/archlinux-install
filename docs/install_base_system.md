@@ -82,16 +82,16 @@ XKBVARIANT=nodeadkeys
 
 ### Zusätzliche Software installieren
 
-```bash
-pacman -S opendoas mandoc networkmanager wireless-regdb htop tmux ripgrep powertop usbutils mesa polkit-gnome
-```
+Mit `tmux` eine neue Tmux-Session öffnen. Das ist wichtig, da bei der Installation seitenweise Ausgaben von Pacman erzeugt werden, unter anderem mit empfohlenen Paketen.
 
-Für die Alternativroute, mit ConnMan statt NetworkManager, `networkmanager` durch `connman` ersetzen.
+```bash
+pacman -S sudo alsa-utils blueman bluez{,-hid2hci,-utils,-tools,-plugins} d-feet dbus-broker doublecmd-qt5 engrampa flatpak foot foot-terminfo fwupd gamemode gamescope gnome-firmware gnome-disk-utility htop intel-gpu-tools irqbalance keepassxc mako mandoc mangohud mc mediainfo-gui mesa mesa-vdpau mousepad mpv networkmanager nm-connection-editor noto-fonts{,-emoji,-cjk,-extras} {otf,ttf}-font-awesome polkit polkit-gnome powertop qt5ct ripgrep ristretto sway{,bg,idle,lock} thermald thunar{,-volman,-{archive,media-tags}-plugin} ttf-croscore usbutils vdpauinfo waybar wireless-regdb wofi wpa_supplicant xdg-user-dirs xorg-xwayland xsettingsd yt-dlp zram-generator
+```
 
 Zusätzliche Abhängigkeiten installieren. Als extra Schritt, um den Vorgang mit `pacman` mit der Option `--asdeps` auch als Abhängigkeit deklarieren zu können.
 
 ```bash
-pacman -S --asdeps bluez iwd lm_sensors lsof vulkan-intel vulkan-mesa-layers libva-mesa-driver libva-intel-driver libva-utils intel-media-driver
+pacman -S --asdeps intel-media-driver intel-media-sdk libva-intel-driver libva-mesa-driver libva-utils libvdpau libvdpau-va-gl lm_sensors lsof mesa-vdpau qt5-wayland vulkan-intel vulkan-mesa-layers
 ```
 
 Für Rechner mit AMD-Grafik `vulkan-intel` durch `vulkan-radeon` ersetzen.
