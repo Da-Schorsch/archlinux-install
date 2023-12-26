@@ -2,14 +2,14 @@
 
 ## Ziele
 
-* Boot
-  * EFI-Boot
-  * Secure-Boot aktiv[^1]
-  * Systemd-boot als Bootmanager
-* BTRFS mit Möglichkeit für Snapshots
-  * Verschlüsselte Systempartition[^1]
-* Swap mit zram statt swap-Partition
-* Initramfs mit `booster` erzeugen statt `mkinitcpio`[^1]
+- [X] Boot
+  - [X] EFI-Boot
+  - [ ] Secure-Boot aktiv
+  - [X] Systemd-boot als Bootmanager
+- [X] BTRFS mit Möglichkeit für Snapshots
+  - [X] Verschlüsselte Systempartition
+- [X] Swap mit zram statt swap-Partition
+- [ ] Initramfs mit `booster` erzeugen statt `mkinitcpio`
 
 ## Installationsmedium erzeugen
 
@@ -47,5 +47,3 @@ Jetzt ist beten und hoffen angesagt.
 ## Debug
 
 [Mit Livesystem in bestehende Installation booten.](docs/00_archiso-to-chroot.md)
-
-[^1]: Erst in einem späteren Anlauf, wenn der Rest funktioniert!
