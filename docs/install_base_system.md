@@ -208,45 +208,36 @@ nano /etc/NetworkManager/conf.d/dns.conf
 dns=systemd-resolved
 ```
 
-#### Alternativ: Netzwerkmanagement mit Connman
-
-`Connman` aktivieren.
-
-```bash
-systemctl enable connman.service
-```
-
-Ethernet vor Wifi priorisieren.
-
-```ini
-nano /etc/connman/main.conf
----------------------------
-[General]
-PreferredTechnologies=ethernet,wifi
-```
-
-Automatische Änderung des Hostname vermeiden.
-
-```ini
-nano /etc/connman/main.conf
----------------------------
-[General]
-AllowHostnameUpdates=false
-```
-
 #### NTP
 
 ```bash
 systemctl enable systemd-timesyncd.service
 ```
 
+#### Bluetooth
+
+Experimentelle DBus-Interfaces in der Bluetoothkonfiguration aktivieren.
+
+```text
+nano /etc/bluetooth/main.conf
+-----------------------------
+Experimental = true
+```
+
+Anschließend den Bluetoothdienst aktivieren.
+
+```bash
+systemctl enable bluetooth.service
+```
+
 #### TODOs und offene Fragen
 
-* Aktivierung im Livesystem nicht geprüft (nur nach Neustart) für Connman und systemd-timesyncd
-* Wirelesskonfiguration mit iwd -> jetzt oder nach Reboot???
+[Systemd-Resolved Seite im ArchWiki für weitere Recherche](https://wiki.archlinux.org/title/Systemd-resolved)
+
 * systemd-resolvd Konfiguration
-  * Normales DNS funktioniert einfach mit Connman!
-    * DNS (DNSSEC, DoH/DoT), mDNS und LLMNR; Was davon geht nicht mit Connman und wird das wirklich benötigt?
+  * Normales DNS sollte einfach funktionieren
+    * Link für Stub-Resolver: passt das alles? 
+    * DNS (DNSSEC, DoH/DoT), mDNS und LLMNR; Was davon geht nicht und wird das wirklich benötigt?
 * Ifplugd? Oder, wenn Stromsparen gefragt ist, nochmal probieren, ob Wifi sparsamer ist.
 
 ### Root Passwort
