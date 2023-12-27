@@ -142,6 +142,21 @@ systemctl enable NetworkManager.service
 
 ##### Wifi einrichten
 
+Zuerst die korrekt Ländereinstellung setzen.
+
+```text
+nano /etc/conf.d/wireless-regdom
+--------------------------------
+# Die Kommentarzeichen entfernen für:
+WIRELESS_REGDOM="DE"
+```
+
+Die Einstellung wird allerdings erst nach einem Neustart aktiv. Für die Konfiguration bis zum ersten Neustart kann noch mit folgendem Befehl nachgeholfen werden.
+
+```bash
+iw reg set DE
+```
+
 Mit `nmtui` das ncurses Interface für NetworkManager starten. Damit kann nach Netzwerken gesucht und auch damit verbunden werden.
 
 Die Alternative, auf der Kommandozeile `nmcli`, zu verwenden hat den Nachteil, dass das WLAN-Passwort in Klartext eingegeben werden muss und dann unverschlüsselt in der bash history landet.
