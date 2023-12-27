@@ -85,16 +85,16 @@ XKBVARIANT=nodeadkeys
 Mit `tmux` eine neue Tmux-Session öffnen. Das ist wichtig, da bei der Installation seitenweise Ausgaben von Pacman erzeugt werden, unter anderem mit empfohlenen Paketen.
 
 ```bash
-pacman -S sudo alsa-utils blueman bluez{,-hid2hci,-utils,-tools,-plugins} d-feet dbus-broker doublecmd-qt5 engrampa flatpak foot foot-terminfo fwupd gamemode gamescope gnome-firmware gnome-disk-utility htop intel-gpu-tools irqbalance keepassxc mako mandoc mangohud mc mediainfo-gui mesa mesa-vdpau mousepad mpv networkmanager nm-connection-editor noto-fonts{,-emoji,-cjk,-extras} {otf,ttf}-font-awesome polkit polkit-gnome powertop qt5ct ripgrep ristretto sway{,bg,idle,lock} thermald thunar{,-volman,-{archive,media-tags}-plugin} ttf-croscore usbutils vdpauinfo waybar wireless-regdb wofi wpa_supplicant xdg-user-dirs xorg-xwayland xsettingsd yt-dlp zram-generator
+pacman -S sudo alsa-utils blueman bluez{,-hid2hci,-utils,-tools,-plugins} d-feet dbus-broker doublecmd-qt5 engrampa flatpak foot foot-terminfo fwupd gamemode gamescope gnome-firmware gnome-disk-utility htop intel-gpu-tools irqbalance keepassxc mako mandoc mangohud mc mediainfo-gui mesa mesa-utils mesa-vdpau mousepad mpv networkmanager nm-connection-editor noto-fonts{,-emoji,-cjk,-extras} {otf,ttf}-font-awesome polkit polkit-gnome powertop qt5ct ripgrep ristretto sway{,bg,idle,lock} thermald thunar{,-volman,-{archive,media-tags}-plugin} ttf-croscore usbutils vdpauinfo waybar wireless-regdb wofi wpa_supplicant xdg-user-dirs xorg-xwayland xsettingsd yt-dlp zram-generator
 ```
 
-Zusätzliche Abhängigkeiten installieren. Als extra Schritt, um den Vorgang mit `pacman` mit der Option `--asdeps` auch als Abhängigkeit deklarieren zu können.
+Zusätzliche Abhängigkeiten installieren. Als extra Schritt, um den Vorgang mit `pacman` mit der Option `--asdeps` auch als Abhängigkeit deklarieren zu können. Die folgende Liste ist nur ein Startpunkt. Im letzten Schritt sind von Pacman sicherlich deutlich mehr zusätzliche Pakete empfohlen worden. -> Die Vorschläge durchgehen und abwägen.
 
 ```bash
 pacman -S --asdeps intel-media-driver intel-media-sdk libva-intel-driver libva-mesa-driver libva-utils libvdpau libvdpau-va-gl lm_sensors lsof mesa-vdpau qt5-wayland vulkan-intel vulkan-mesa-layers
 ```
 
-Für Rechner mit AMD-Grafik `vulkan-intel` durch `vulkan-radeon` ersetzen.
+Für Rechner mit AMD-Grafik `vulkan-intel` durch `vulkan-radeon` ersetzen und die anderen `*intel*` Pakete weglassen.
 
 ### Netzwerkkonfiguration
 
@@ -377,6 +377,9 @@ Den **HOOKS** Eintrag in `mkinitcpio.conf` anpassen. Gefordert ist:
 * Unbedingte Unterstützung von USB-Eingabegeräten, unabhängig davon, welche Geräte beim Erzeugen der *initrd* gerade angeschlossen sind (wichtig bei Laptops)
 
 Außerdem den Graphictreiber unter **MODULES** angeben für Early-KMS (korrekte Bildschirmauflösung schon beim Booten).
+
+* `i915` für Intel-GPUs
+* `amdgpu` für AMD-GPUs
 
 ```text
 nano /etc/mkinitcpio.conf
