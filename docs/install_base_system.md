@@ -185,19 +185,13 @@ systemctl enable systemd-resolved
 
 NetworkManager verwendet automatisch `systemd-resolved` wenn `/etc/resolv.conf` ein Symlink auf `/run/systemd/resolve/stub-resolv.conf` ist.
 
-Symlink setzen:
+Um den Symlink zu setzen muss das Chroot verlassen werden, da im Chroot `/run` leer ist. Also entweder mit `Ctrl+d` oder `exit` das Chroot verlassen. Dann im Livesystem den Symlink setzen.
 
 ```bash
 ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
 ```
 
-Das Archwiki hat den Befehl in dieser Version (und ich kapier' nicht warum):
-
-```bash
-ln -sf ../run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
-```
-
-Wenn die Konfiguration nicht im Chroot erfolgt, sondern erst wenn das System schon "richtig" gebootet wurde, dann muss `/mnt/etc/resolv.conf` durch `/etc/resolv.conf` ersetzt werden.
+Wenn die Konfiguration nicht im Livesystem erfolgt, sondern erst wenn das System schon "richtig" gebootet wurde, dann muss `/mnt/etc/resolv.conf` durch `/etc/resolv.conf` ersetzt werden.
 
 Falls man sich nicht nur auf den Symlink verlassen will, kann NetworkManager auch explizit nochmal darauf hingewiesen werden, dass `system-resolved` verwendet werden soll.
 
