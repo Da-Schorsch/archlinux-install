@@ -183,9 +183,7 @@ NetworkManager kann `systemd-resolved` als DNS-Resolver und -Cache verwenden. `s
 systemctl enable systemd-resolved
 ```
 
-NetworkManager verwendet automatisch `systemd-resolved` wenn `/etc/resolv.conf` ein Symlink auf `/run/systemd/resolve/stub-resolv.conf` ist.
-
-Um den Symlink zu setzen muss das Chroot verlassen werden, da im Chroot `/run` leer ist. Also entweder mit `Ctrl+d` oder `exit` das Chroot verlassen. Dann im Livesystem den Symlink setzen.
+NetworkManager verwendet automatisch `systemd-resolved` wenn `/etc/resolv.conf` ein Symlink auf `/run/systemd/resolve/stub-resolv.conf` ist. Um den Symlink zu setzen, muss das Chroot verlassen werden da im Chroot `/run` leer ist. Also entweder mit `Ctrl+d` oder `exit` das Chroot verlassen. Dann im Livesystem den Symlink setzen.
 
 ```bash
 ln -sf /run/systemd/resolve/stub-resolv.conf /mnt/etc/resolv.conf
