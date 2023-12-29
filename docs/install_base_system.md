@@ -252,7 +252,7 @@ bootctl install
 
 installiert werden.
 
-##### Automatisches Update einrichten
+#### Automatisches Update einrichten
 
 Der Bootloader muss bei einem Update von *systemd* (und damit auch *systemd-boot*) aktualisiert werden. Dies lässt sich mit einem pacman hook automatisieren.
 
