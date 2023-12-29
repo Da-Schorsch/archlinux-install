@@ -132,7 +132,7 @@ Prüfen, ob alles passt. `getent hosts` Sollte folgende Ausgabe liefern.
 127.0.1.1       optiplex
 ```
 
-#### Netzwerkmanagement mit NetworkManager
+#### NetworkManager
 
 `NetworkManager` aktivieren.
 
@@ -140,7 +140,7 @@ Prüfen, ob alles passt. `getent hosts` Sollte folgende Ausgabe liefern.
 systemctl enable NetworkManager.service
 ```
 
-##### Wifi einrichten
+#### Wifi einrichten
 
 Zuerst die korrekt Ländereinstellung setzen.
 
@@ -161,7 +161,7 @@ Mit `nmtui` das ncurses Interface für NetworkManager starten. Damit kann nach N
 
 Die Alternative, auf der Kommandozeile `nmcli`, zu verwenden hat den Nachteil, dass das WLAN-Passwort in Klartext eingegeben werden muss und dann unverschlüsselt in der bash history landet.
 
-##### Verbindungsüberprüfung (captive portal)
+#### Verbindungsüberprüfung (captive portal)
 
 Unklar, ob diese Funktion nicht auch schon standardmäßig aktiv ist (mit Config unter `/usr/lib/NetworkManager/conf.d/20-connectivity.conf`).
 
@@ -175,7 +175,7 @@ enabled=true
 uri=http://ping.archlinux.org/nm-check.txt
 ```
 
-##### DNS Management mit systemd-resolved
+#### DNS Management mit systemd-resolved
 
 NetworkManager kann `systemd-resolved` als DNS-Resolver und -Cache verwenden. `systemd-resolved` wird dabei im stub-Modus betrieben. Als erstes muss der Service aktiviert werden.
 
