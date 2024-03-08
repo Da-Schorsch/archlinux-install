@@ -228,7 +228,7 @@ systemctl enable bluetooth.service
 
 * systemd-resolvd Konfiguration
   * Normales DNS sollte einfach funktionieren
-    * Link für Stub-Resolver: passt das alles? 
+    * Link für Stub-Resolver: passt das alles?
     * DNS (DNSSEC, DoH/DoT), mDNS und LLMNR; Was davon geht nicht und wird das wirklich benötigt?
 * Ifplugd? Oder, wenn Stromsparen gefragt ist, nochmal probieren, ob Wifi sparsamer ist.
 
